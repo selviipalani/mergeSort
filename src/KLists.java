@@ -97,7 +97,6 @@ public class KLists {
      */
     public static void merge(double [] target,double [] left, double [] right){
         int i = 0, j = 0;
-        // Initial index of merged subarry array
         int k = 0;
         while (i < left.length && j < right.length) {
             if (left[i] <= right[j]) {
@@ -111,14 +110,11 @@ public class KLists {
             k++;
         }
 
-        /* Copy remaining elements of L[] if any */
         while (i < left.length) {
             target[k] = left[i];
             i++;
             k++;
         }
-
-        /* Copy remaining elements of R[] if any */
         while (j < right.length) {
             target[k] = right[j];
             j++;
